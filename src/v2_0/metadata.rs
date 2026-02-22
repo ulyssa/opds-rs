@@ -33,6 +33,9 @@ pub enum Relation {
     /// [Web Application Manifest]: https://www.w3.org/TR/appmanifest/
     Manifest,
 
+    /// A link to a user's profile.
+    Profile,
+
     /// A link to the first resource in a collection of resources.
     ///
     /// For example, the first page in a paginated view.
@@ -2070,14 +2073,18 @@ pub struct LinkProperties<'a> {
     #[serde(skip_serializing_if = "Option::is_none", rename = "numberOfItems")]
     pub count: Option<usize>,
 
-    /// The price of the publication (tied to its acquisition link).
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub price: Option<Price>,
-
     /// Indicates how the linked resource should be displayed in a reading environment that
     /// displays synthetic spreads.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub page: Option<PageDisplay>,
+
+    /// Indicates the availability of a given resource.
+    #[serde(borrow, skip_serializing_if = "Option::is_none")]
+    pub availability: Option<Availability<'a>>,
+
+    /// The price of the publication (tied to its acquisition link).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub price: Option<Price>,
 
     /// A hint for the expected media type that will be acquired after additional steps.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
@@ -2090,10 +2097,6 @@ pub struct LinkProperties<'a> {
     /// Library-specific feature that contains information about the copies that a library has acquired.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub copies: Option<Copies>,
-
-    /// Indicates the availability of a given resource.
-    #[serde(borrow, skip_serializing_if = "Option::is_none")]
-    pub availability: Option<Availability<'a>>,
 }
 
 impl<'a> LinkProperties<'a> {
