@@ -53,18 +53,21 @@ pub struct Link<'a> {
     pub title: Option<Cow<'a, str>>,
 
     /// URI or URI template of the linked resource.
-    #[serde(borrow)]
-    pub href: Cow<'a, str>,
+    ///
+    /// While this field should always be present according to the JSON schema, some catalogs
+    /// will return link objects without an `href` for [AvailabilityState::Unavailable] content.
+    #[serde(borrow, skip_serializing_if = "Option::is_none")]
+    pub href: Option<Cow<'a, str>>,
+
+    /// Indicates that a URI template is used in `href`.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub templated: bool,
 
     /// MIME type of the linked resource.
     ///
     /// See [crate::mime] for common OPDS MIME types.
     #[serde(borrow, skip_serializing_if = "Option::is_none", rename = "type")]
     pub mime: Option<Cow<'a, str>>,
-
-    /// Indicates that a URI template is used in `href`.
-    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
-    pub templated: bool,
 
     /// Relation between the linked resource and its containing collection.
     #[serde(
@@ -119,6 +122,46 @@ pub struct Link<'a> {
 }
 
 impl<'a> Link<'a> {
+    pub fn new(href: Cow<'a, str>, mime: Option<Cow<'a, str>>) -> Self {
+        Link {
+            href: Some(href),
+            templated: false,
+            mime,
+
+            title: None,
+            rel: vec![],
+            properties: LinkProperties::default(),
+            height: None,
+            width: None,
+            size: None,
+            bitrate: None,
+            duration: None,
+            language: vec![],
+            alternate: vec![],
+            children: vec![],
+        }
+    }
+
+    pub fn template(href: Cow<'a, str>, mime: Option<Cow<'a, str>>) -> Self {
+        Link {
+            href: Some(href),
+            templated: true,
+            mime,
+
+            title: None,
+            rel: vec![],
+            properties: LinkProperties::default(),
+            height: None,
+            width: None,
+            size: None,
+            bitrate: None,
+            duration: None,
+            language: vec![],
+            alternate: vec![],
+            children: vec![],
+        }
+    }
+
     pub fn get_acquisition(&self) -> Option<AcquisitionKind> {
         self.rel.iter().flat_map(|rel| rel.as_acquisition()).next()
     }

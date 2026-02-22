@@ -1,0 +1,1211 @@
+{
+  "groups": [
+    {
+      "links": [
+        {
+          "href": "https://opds.prod.archive.org/catalog?short_query=AVW13",
+          "rel": "self",
+          "type": "application/opds+json"
+        }
+      ],
+      "metadata": {
+        "numberOfItems": 1680474,
+        "title": "Available Now"
+      },
+      "publications": [
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/delinquencyschoo0000eith/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/delinquencyschoo0000eith/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=delinquencyschoo0000eith&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=delinquencyschoo0000eith&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Eith, Christine A., 1975-",
+            "description": "1 online resource (ix, 169 pages)<br><br>Includes bibliographical references (pages 151-163) and index<br><br>Public schools and the social bond -- Research hypotheses and methodology -- School bonds in elementary school -- The social bond in middle school -- The high school bonding experience -- Conclusions and policy implications<br><br>Print version record<br><br>Electronic reproduction. [S.l.] : HathiTrust Digital Library<br><br>Master and use copy. Digital master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002<br><br>digitized 2010",
+            "identifier": "https://archive.org/details/delinquencyschoo0000eith",
+            "language": "en",
+            "numberOfPages": 188,
+            "published": "2018-07-23T02:27:19Z",
+            "title": "Delinquency, schools, and the social bond"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/knigarusskikhino0000unse/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/knigarusskikhino0000unse/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=knigarusskikhino0000unse&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=knigarusskikhino0000unse&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "description": "251 pages ; 23 cm",
+            "identifier": "https://archive.org/details/knigarusskikhino0000unse",
+            "language": "ru",
+            "numberOfPages": 266,
+            "published": "2020-01-10T04:05:29Z",
+            "title": "Kniga russkikh inorodnykh skazok : antologiiŁa"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/makingofhardrock0000voyn/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/makingofhardrock0000voyn/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=makingofhardrock0000voyn&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=makingofhardrock0000voyn&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Voynick, Stephen M",
+            "description": "224 p. : 22 cm",
+            "identifier": "https://archive.org/details/makingofhardrock0000voyn",
+            "language": "en",
+            "numberOfPages": 230,
+            "published": "2020-01-21T01:08:53Z",
+            "title": "The making of a hardrock miner : an account of the experiences of a worker in copper, molybdenum, and uranium mines in the West"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/mannforallseason0000mann/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/mannforallseason0000mann/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=mannforallseason0000mann&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=mannforallseason0000mann&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Mann, Judy (Judy W.)",
+            "description": "306 pages ; 24 cm<br><br>Includes index",
+            "identifier": "https://archive.org/details/mannforallseason0000mann",
+            "language": "en",
+            "numberOfPages": 330,
+            "published": "2019-11-08T04:36:56Z",
+            "title": "Mann for all seasons : wit and wisdom from the Washington post's Judy Mann"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/livesoflaureates0000unse/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/livesoflaureates0000unse/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=livesoflaureates0000unse&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=livesoflaureates0000unse&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "description": "xiv, 271 p. : 21 cm<br><br>Includes bibliographical references (p. [269]-271)",
+            "identifier": "https://archive.org/details/livesoflaureates0000unse",
+            "language": "en",
+            "numberOfPages": 298,
+            "published": "2019-02-09T11:59:31Z",
+            "title": "Lives of the laureates : thirteen Nobel economists"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/lesombresdenovem0000grar/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/lesombresdenovem0000grar/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=lesombresdenovem0000grar&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=lesombresdenovem0000grar&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Grard, Françoise, 1957-",
+            "description": "Julien s'est lié d'amitié avec Maëlle malgré la brouille qui sépare leurs deux familles. Depuis l'accident de Maëlle, Julien va régulièrement lui porter ses devoirs. Voilà que son père le lui interdit et Julien veut savoir pourquoi. Une collection qui propose de partager des secrets de famille",
+            "identifier": "https://archive.org/details/lesombresdenovem0000grar",
+            "language": "fr",
+            "numberOfPages": 120,
+            "published": "2022-02-04T06:44:49Z",
+            "title": "Les ombres de Novembre"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/heldfastforengla0000arno/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/heldfastforengla0000arno/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=heldfastforengla0000arno&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=heldfastforengla0000arno&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Arnold, Guy",
+            "description": "195 p., [1] leaf of plates :<br><br>Includes bibliographical references",
+            "identifier": "https://archive.org/details/heldfastforengla0000arno",
+            "language": "en",
+            "numberOfPages": 220,
+            "published": "2019-08-12T23:00:56Z",
+            "title": "Held fast for England : G. A. Henty, imperialist boys' writer"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/walls00daly/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/walls00daly/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=walls00daly&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=walls00daly&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Daly, Jay",
+            "description": "\"An Ursula Nordstrom book.\"<br><br>Frankie O'Day, an incurable graffiti writer, has to deal with pranksterish friends, an alcoholic father, and a new romance",
+            "identifier": "https://archive.org/details/walls00daly",
+            "language": "en",
+            "numberOfPages": 234,
+            "published": "2015-09-30T20:49:56Z",
+            "title": "Walls"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/trailsofironhors00west/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/trailsofironhors00west/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=trailsofironhors00west&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=trailsofironhors00west&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": [
+              "Western Writers of America",
+              "Russell, Don, 1899- ed"
+            ],
+            "description": "Includes index",
+            "identifier": "https://archive.org/details/trailsofironhors00west",
+            "language": "en",
+            "numberOfPages": 266,
+            "published": "2014-01-07T20:50:17Z",
+            "title": "Trails of the iron horse : an informal history"
+          }
+        }
+      ]
+    },
+    {
+      "links": [
+        {
+          "href": "https://opds.prod.archive.org/catalog?short_query=PRS23",
+          "rel": "self",
+          "type": "application/opds+json"
+        }
+      ],
+      "metadata": {
+        "numberOfItems": 4755707,
+        "title": "Print Disability Access"
+      },
+      "publications": [
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/seeingwhatissacr0000gire/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/seeingwhatissacr0000gire/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=seeingwhatissacr0000gire&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "properties": {
+                "availability": {
+                  "state": "unavailable"
+                }
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Gire, Ken",
+            "description": "200 p. ; 22 cm<br><br>Includes bibliographical references (p. 193-196) and index<br><br>Introduction -- The reflective life -- The seed of the reflective life -- The soil of the reflective life -- The water of the reflective life -- The cultivation of the reflective life -- The growth of the reflective life -- The fruit of the reflective life -- The harvest of the reflective life",
+            "identifier": "https://archive.org/details/seeingwhatissacr0000gire",
+            "language": "en",
+            "numberOfPages": 214,
+            "published": "2021-08-03T00:51:10Z",
+            "title": "Seeing what is sacred : becoming more spiritually sensitive to the everyday moments of life"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/walkingtourswash0000unse/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/walkingtourswash0000unse/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=walkingtourswash0000unse&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=walkingtourswash0000unse&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": []
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "identifier": "https://archive.org/details/walkingtourswash0000unse",
+            "language": "en",
+            "numberOfPages": 134,
+            "published": "2020-11-10T02:43:59Z",
+            "title": "walking tours: washington d.c."
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/integratedpublic0000loom/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/integratedpublic0000loom/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=integratedpublic0000loom&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "properties": {
+                "availability": {
+                  "state": "unavailable"
+                }
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Loomis, John B",
+            "description": "xxi, 474 p. : 26 cm<br><br>Includes bibliographical references (p. [459]-470) and index<br><br>94 07 27",
+            "identifier": "https://archive.org/details/integratedpublic0000loom",
+            "language": "en",
+            "numberOfPages": 514,
+            "published": "2019-04-02T04:24:36Z",
+            "title": "Integrated public lands management : principles and applications to national forests, parks, wildlife refuges, and BLM lands"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/ironmankoreanedi0000dani/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/ironmankoreanedi0000dani/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=ironmankoreanedi0000dani&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=ironmankoreanedi0000dani&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Kim, Daniel, author",
+            "description": "239 pages : 21 cm",
+            "identifier": "https://archive.org/details/ironmankoreanedi0000dani",
+            "language": "ko",
+            "numberOfPages": 254,
+            "published": "2024-01-18T02:00:24Z",
+            "title": "Ch'ŏrin : Sesang i kamdangch'i mothal midŭm ŭi saram"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_3764327227/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_3764327227/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_3764327227&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_3764327227&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "description": "x, 305 p. : 24 cm<br><br>\"Co-sponsored by European Community Working Party on AIDS ... [et al.]\"<br><br>Includes bibliographical references",
+            "identifier": "https://archive.org/details/isbn_3764327227",
+            "language": "en",
+            "numberOfPages": 330,
+            "published": "2023-10-24T05:55:15Z",
+            "title": "Assessing AIDS prevention : selected papers presented at the international conference held in Montreux (Switzerland), October 29-November 1, 1990"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_9780205036042/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_9780205036042/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_9780205036042&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_9780205036042&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "identifier": "https://archive.org/details/isbn_9780205036042",
+            "language": "en",
+            "numberOfPages": 462,
+            "published": "2021-08-17T13:06:20Z",
+            "title": "Exam Copy for Cultural Anthropology"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_9780324297836/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_9780324297836/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_9780324297836&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "properties": {
+                "availability": {
+                  "state": "unavailable"
+                }
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "n/a",
+            "identifier": "https://archive.org/details/isbn_9780324297836",
+            "language": "en",
+            "numberOfPages": 502,
+            "published": "2021-01-16T08:25:16Z",
+            "title": "ACP KENNESAW ST U ECON 1100"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_9780325035727/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_9780325035727/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_9780325035727&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_9780325035727&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "identifier": "https://archive.org/details/isbn_9780325035727",
+            "language": "en",
+            "numberOfPages": 38,
+            "published": "2023-04-26T13:11:42Z",
+            "title": "The story of naismith's game"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_0022774203/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_0022774203/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_0022774203&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_0022774203&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "identifier": "https://archive.org/details/isbn_0022774203",
+            "language": "en",
+            "numberOfPages": 778,
+            "published": "2023-09-28T15:19:37Z",
+            "title": "Biology"
+          }
+        },
+        {
+          "images": [
+            {
+              "height": 1400,
+              "href": "https://archive.org/download/isbn_0523423594/__ia_thumb.jpg",
+              "rel": "cover",
+              "type": "image/jpeg",
+              "width": 800
+            },
+            {
+              "height": 700,
+              "href": "https://archive.org/download/isbn_0523423594/__ia_thumb.jpg",
+              "type": "image/jpeg",
+              "width": 400
+            }
+          ],
+          "links": [
+            {
+              "href": "https://archive.org/services/loans/loan/?action=webpub&identifier=isbn_0523423594&opds=1",
+              "rel": "self",
+              "type": "application/opds-publication+json"
+            },
+            {
+              "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_0523423594&action=webpub",
+              "properties": {
+                "availability": {
+                  "state": "available"
+                },
+                "indirectAcquisition": [
+                  {
+                    "child": [
+                      {
+                        "type": "application/epub+zip"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  },
+                  {
+                    "child": [
+                      {
+                        "type": "application/pdf+lcp"
+                      }
+                    ],
+                    "type": "application/vnd.readium.lcp.license.v1.0+json"
+                  }
+                ]
+              },
+              "rel": "http://opds-spec.org/acquisition/borrow",
+              "type": "application/opds-publication+json"
+            }
+          ],
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "author": "Gerald Kushel",
+            "identifier": "https://archive.org/details/isbn_0523423594",
+            "language": "en",
+            "numberOfPages": 262,
+            "published": "2022-05-14T18:34:33Z",
+            "title": "Centering (R) -Op/97"
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=BRS19",
+      "rel": "self",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/search{?query}",
+      "rel": "search",
+      "templated": true,
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://archive.org/services/loans/loan/?action=user_bookshelf",
+      "rel": "http://opds-spec.org/shelf",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://archive.org/services/loans/loan/?action=user_profile",
+      "rel": "profile",
+      "type": "application/opds-profile+json"
+    }
+  ],
+  "metadata": {
+    "title": "Archive.org"
+  },
+  "navigation": [
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=LCW25",
+      "title": "LCP Books Ready to Borrow",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=MOS12",
+      "title": "Modern Books",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=RED17",
+      "title": "Recently Returned",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=AVW13",
+      "title": "Available Now",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=NES13",
+      "title": "New Additions",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=POR7",
+      "title": "Popular",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=LIS19",
+      "title": "Librivox Audiobooks",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=PRS23",
+      "title": "Print Disability Access",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=BRS20",
+      "title": "Browse By Categories",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=BRE15",
+      "title": "Browse By Title",
+      "type": "application/opds+json"
+    },
+    {
+      "href": "https://opds.prod.archive.org/catalog?short_query=BRE18",
+      "title": "Browse By Language",
+      "type": "application/opds+json"
+    }
+  ]
+}
