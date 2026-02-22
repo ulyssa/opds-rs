@@ -1,0 +1,24 @@
+[package]
+name = "opds"
+version = "0.0.1"
+description = "Library for building and parsing OPDS responses"
+homepage = "https://github.com/ulyssa/opds-rs"
+repository = "https://github.com/ulyssa/opds-rs"
+documentation = "https://docs.rs/opds/latest/opds"
+authors = ["Ulyssa <git@ulyssa.dev>"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+rust-version = "1.89"
+edition = "2024"
+keywords = ["opds", "serde"]
+
+[dependencies]
+langtag = { version = "^1.1.0", features = ["serde"] }
+serde = "^1.0.228"
+url = { version = "2.5.8", features = ["serde"] }
+urn = { version = "0.7.0", features = ["serde"] }
+
+[dev-dependencies]
+anyhow = "1.0.101"
+pretty_assertions = "^1.4.1"
+serde_json = "^1.0.149"
