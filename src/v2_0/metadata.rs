@@ -93,37 +93,40 @@ impl From<String> for Relation {
     }
 }
 
+/// An acquisition relation, per spec §5.3.
+///
+/// Both the OPDS 2.0 simplified value and the historical OPDS 1.x alias URI are
+/// accepted on input; serialization always emits the simplified value.
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
-#[serde(rename_all = "lowercase")]
 #[non_exhaustive]
 pub enum AcquisitionKind {
-    /// Fallback acquisition relation when no other relation is a good fit
+    /// The acquisition relation, used when no other relation is a good fit
     /// to express the nature of the transaction.
-    #[serde(rename = "http://opds-spec.org/acquisition")]
-    Fallback,
+    #[serde(rename = "acquisition", alias = "http://opds-spec.org/acquisition")]
+    Acquisition,
 
     /// Indicates that a publication is freely accessible without any requirement,
     /// including authentication.
-    #[serde(rename = "http://opds-spec.org/acquisition/open-access")]
-    OpenAccess,
+    #[serde(rename = "download", alias = "http://opds-spec.org/acquisition/open-access")]
+    Download,
 
     /// Indicates that a publication can be purchased for a given price.
-    #[serde(rename = "http://opds-spec.org/acquisition/buy")]
+    #[serde(rename = "buy", alias = "http://opds-spec.org/acquisition/buy")]
     Buy,
+
+    /// Indicates that a publication can be borrowed for a limited period of time.
+    #[serde(rename = "borrow", alias = "http://opds-spec.org/acquisition/borrow")]
+    Borrow,
 
     /// Indicates that a sub-set of the full publication is freely accessible
     /// at a given URI, without any prior requirement.
-    #[serde(rename = "http://opds-spec.org/acquisition/sample")]
-    Sample,
+    #[serde(rename = "preview", alias = "http://opds-spec.org/acquisition/sample")]
+    Preview,
 
     /// Indicates that a publication be subscribed to, usually as part of a
     /// purchase and for a limited period of time.
-    #[serde(rename = "http://opds-spec.org/acquisition/subscribe")]
+    #[serde(rename = "subscribe", alias = "http://opds-spec.org/acquisition/subscribe")]
     Subscribe,
-
-    /// Indicates that a sub-set of the full publication is freely accessible
-    /// at a given URI, without any prior requirement.
-    Preview,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]

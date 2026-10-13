@@ -122,7 +122,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=delinquencyschoo0000eith&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -185,7 +185,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=knigarusskikhino0000unse&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -253,7 +253,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=makingofhardrock0000voyn&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -321,7 +321,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=mannforallseason0000mann&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -384,7 +384,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=livesoflaureates0000unse&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -452,7 +452,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=lesombresdenovem0000grar&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -520,7 +520,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=heldfastforengla0000arno&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -588,7 +588,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=walls00daly&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -659,7 +659,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=trailsofironhors00west&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -741,7 +741,7 @@
             },
             {
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "unavailable"
@@ -785,7 +785,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=walkingtourswash0000unse&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -834,7 +834,7 @@
             },
             {
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "unavailable"
@@ -884,7 +884,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=ironmankoreanedi0000dani&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -947,7 +947,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_3764327227&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -1009,7 +1009,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_9780205036042&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -1075,7 +1075,7 @@
             },
             {
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "unavailable"
@@ -1119,7 +1119,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_9780325035727&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -1181,7 +1181,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_0022774203&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
@@ -1248,7 +1248,7 @@
             {
               "href": "https://archive.org/services/loans/loan/?opds=1&identifier=isbn_0523423594&action=webpub",
               "type": "application/opds-publication+json",
-              "rel": "http://opds-spec.org/acquisition/borrow",
+              "rel": "borrow",
               "properties": {
                 "availability": {
                   "state": "available"
