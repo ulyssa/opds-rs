@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "title": "Libraries",
+    "adobe_vendor_id": "ThePalaceProject"
+  },
+  "links": [
+    {
+      "href": "https://registry.palaceproject.io/libraries",
+      "type": "application/opds+json",
+      "rel": "self"
+    },
+    {
+      "href": "https://registry.palaceproject.io/register",
+      "type": "application/opds+json;profile=https://librarysimplified.org/rel/profile/directory",
+      "rel": "register"
+    },
+    {
+      "href": "https://registry.palaceproject.io/search",
+      "type": "application/opensearchdescription+xml",
+      "rel": "search"
+    },
+    {
+      "href": "https://registry.palaceproject.io/library/{uuid}",
+      "templated": true,
+      "type": "application/opds+json",
+      "rel": "http://librarysimplified.org/rel/registry/library"
+    }
+  ],
+  "facets": [
+    {
+      "metadata": {
+        "title": "Sort by",
+        "@type": "http://palaceproject.io/terms/rel/sort",
+        "http://palaceproject.io/terms/facet/param": "order"
+      },
+      "links": [
+        {
+          "title": "Most recently modified first",
+          "href": "https://registry.palaceproject.io/libraries?order=modified&availability=production",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/group": "modified",
+            "http://palaceproject.io/terms/facet/value": "modified"
+          }
+        },
+        {
+          "title": "Least recently modified first",
+          "href": "https://registry.palaceproject.io/libraries?order=modified-asc&availability=production",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/group": "modified",
+            "http://palaceproject.io/terms/facet/value": "modified-asc"
+          }
+        },
+        {
+          "title": "Library name (A-Z)",
+          "href": "https://registry.palaceproject.io/libraries?order=name&availability=production",
+          "type": "application/opds+json",
+          "rel": "self",
+          "properties": {
+            "http://palaceproject.io/terms/facet/group": "name",
+            "http://palaceproject.io/terms/facet/value": "name",
+            "http://palaceproject.io/terms/properties/default": true
+          }
+        },
+        {
+          "title": "Library name (Z-A)",
+          "href": "https://registry.palaceproject.io/libraries?order=name-desc&availability=production",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/group": "name",
+            "http://palaceproject.io/terms/facet/value": "name-desc"
+          }
+        },
+        {
+          "title": "Database order",
+          "href": "https://registry.palaceproject.io/libraries?order=natural&availability=production",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/value": "natural"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "title": "Availability",
+        "@type": "http://palaceproject.io/terms/rel/availability",
+        "http://palaceproject.io/terms/facet/param": "availability"
+      },
+      "links": [
+        {
+          "title": "Production",
+          "href": "https://registry.palaceproject.io/libraries?order=name&availability=production",
+          "type": "application/opds+json",
+          "rel": "self",
+          "properties": {
+            "http://palaceproject.io/terms/facet/value": "production",
+            "http://palaceproject.io/terms/properties/default": true
+          }
+        },
+        {
+          "title": "Hidden",
+          "href": "https://registry.palaceproject.io/libraries?order=name&availability=hidden",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/value": "hidden"
+          }
+        },
+        {
+          "title": "All: Production and Hidden",
+          "href": "https://registry.palaceproject.io/libraries?order=name&availability=all",
+          "type": "application/opds+json",
+          "properties": {
+            "http://palaceproject.io/terms/facet/value": "all"
+          }
+        }
+      ]
+    }
+  ],
+  "catalogs": [
+    {
+      "images": [
+        {
+          "href": "https://tpp-prod-library-registry-public.s3.amazonaws.com/logo/ca400d14-4e02-4c96-b410-619fb50552e0.png",
+          "rel": "http://opds-spec.org/image/thumbnail",
+          "type": "image/png"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://il.thepalaceproject.org/171371001664/",
+          "rel": "http://opds-spec.org/catalog",
+          "type": "application/atom+xml;profile=opds-catalog;kind=acquisition"
+        },
+        {
+          "href": "https://il.thepalaceproject.org/171371001664/authentication_document",
+          "rel": "http://opds-spec.org/auth/document",
+          "type": "application/vnd.opds.authentication.v1.0+json"
+        },
+        {
+          "href": "https://abbott.u-46.org",
+          "rel": "alternate",
+          "type": "text/html"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:ca400d14-4e02-4c96-b410-619fb50552e0/eligibility",
+          "rel": "http://librarysimplified.org/rel/registry/eligibility",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:ca400d14-4e02-4c96-b410-619fb50552e0/focus",
+          "rel": "http://librarysimplified.org/rel/registry/focus",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "mailto:tonyromero@u-46.org",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "help"
+        },
+        {
+          "href": "mailto:tonyromero@u-46.org",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "http://librarysimplified.org/rel/designated-agent/copyright"
+        }
+      ],
+      "metadata": {
+        "description": "serving Abbott Middle School Library, IL",
+        "id": "urn:uuid:ca400d14-4e02-4c96-b410-619fb50552e0",
+        "modified": "2026-07-20T13:16:46Z",
+        "title": "Abbott Middle School Library",
+        "updated": "2026-07-20T13:16:46Z"
+      }
+    },
+    {
+      "images": [
+        {
+          "href": "https://tpp-prod-library-registry-public.s3.amazonaws.com/logo/c98213f2-87e7-450b-a511-4a04bc1a32c9.png",
+          "rel": "http://opds-spec.org/image/thumbnail",
+          "type": "image/png"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://il.thepalaceproject.org/170141306274/",
+          "rel": "http://opds-spec.org/catalog",
+          "type": "application/atom+xml;profile=opds-catalog;kind=acquisition"
+        },
+        {
+          "href": "https://il.thepalaceproject.org/170141306274/authentication_document",
+          "rel": "http://opds-spec.org/auth/document",
+          "type": "application/vnd.opds.authentication.v1.0+json"
+        },
+        {
+          "href": "https://avoncusdlibrarycom.weebly.com",
+          "rel": "alternate",
+          "type": "text/html"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:c98213f2-87e7-450b-a511-4a04bc1a32c9/eligibility",
+          "rel": "http://librarysimplified.org/rel/registry/eligibility",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:c98213f2-87e7-450b-a511-4a04bc1a32c9/focus",
+          "rel": "http://librarysimplified.org/rel/registry/focus",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "mailto:techelp@atown276.net",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "http://librarysimplified.org/rel/designated-agent/copyright"
+        },
+        {
+          "href": "mailto:techelp@atown276.net",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "help"
+        }
+      ],
+      "metadata": {
+        "description": "serving Abingdon-Avon High School Library, IL",
+        "id": "urn:uuid:c98213f2-87e7-450b-a511-4a04bc1a32c9",
+        "modified": "2026-09-22T17:14:51Z",
+        "title": "Abingdon-Avon High School Library",
+        "updated": "2026-09-22T17:14:51Z"
+      }
+    },
+    {
+      "images": [
+        {
+          "href": "https://tpp-prod-library-registry-public.s3.amazonaws.com/logo/055e63cd-2376-4101-8396-f6d739ff459c.png",
+          "rel": "http://opds-spec.org/image/thumbnail",
+          "type": "image/png"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://il.thepalaceproject.org/170141306276/",
+          "rel": "http://opds-spec.org/catalog",
+          "type": "application/atom+xml;profile=opds-catalog;kind=acquisition"
+        },
+        {
+          "href": "https://il.thepalaceproject.org/170141306276/authentication_document",
+          "rel": "http://opds-spec.org/auth/document",
+          "type": "application/vnd.opds.authentication.v1.0+json"
+        },
+        {
+          "href": "https://avoncusdlibrarycom.weebly.com",
+          "rel": "alternate",
+          "type": "text/html"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:055e63cd-2376-4101-8396-f6d739ff459c/eligibility",
+          "rel": "http://librarysimplified.org/rel/registry/eligibility",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "https://registry.palaceproject.io/library/urn:uuid:055e63cd-2376-4101-8396-f6d739ff459c/focus",
+          "rel": "http://librarysimplified.org/rel/registry/focus",
+          "type": "application/geo+json"
+        },
+        {
+          "href": "mailto:techelp@atown276.net",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "http://librarysimplified.org/rel/designated-agent/copyright"
+        },
+        {
+          "href": "mailto:techelp@atown276.net",
+          "properties": {
+            "https://schema.org/reservationStatus": "https://schema.org/ReservationCancelled"
+          },
+          "rel": "help"
+        }
+      ],
+      "metadata": {
+        "description": "serving Abingdon-Avon Middle School Library, IL",
+        "id": "urn:uuid:055e63cd-2376-4101-8396-f6d739ff459c",
+        "modified": "2026-09-22T17:14:55Z",
+        "title": "Abingdon-Avon Middle School Library",
+        "updated": "2026-09-22T17:14:55Z"
+      }
+    }
+  ]
+}

@@ -102,3 +102,73 @@ where
         input.serialize(serializer)
     }
 }
+
+/// A slightly relaxed boolean deserializer.
+///
+/// Some catalogs send the string `"true"` or `"false"` instead of an actual JSON boolean,
+/// so we check if that's the case and fix it to be an actual Rust [bool].
+pub(crate) fn deserialize_lenient_bool<'de, D>(deserializer: D) -> Result<Option<bool>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum Lenient<'a> {
+        Bool(bool),
+        #[serde(borrow)]
+        String(Cow<'a, str>),
+    }
+
+    match Option::<Lenient>::deserialize(deserializer)? {
+        None => Ok(None),
+        Some(Lenient::Bool(b)) => Ok(Some(b)),
+        Some(Lenient::String(s)) => match s.trim() {
+            "true" => Ok(Some(true)),
+            "false" => Ok(Some(false)),
+            other => Err(serde::de::Error::custom(format!(
+                "expected a boolean, got {other:?}"
+            ))),
+        },
+    }
+}
+
+/// A slightly relaxed number deserializer.
+///
+/// Some catalogs send a string for number fields, e.g. a series position of `"1"`, so
+/// we check if that's the case and fix it to be an actual Rust [f64].
+pub(crate) fn deserialize_lenient_number<'de, D>(deserializer: D) -> Result<Option<f64>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum Lenient<'a> {
+        Number(f64),
+        #[serde(borrow)]
+        String(Cow<'a, str>),
+    }
+
+    match Option::<Lenient>::deserialize(deserializer)? {
+        None => Ok(None),
+        Some(Lenient::Number(n)) => Ok(Some(n)),
+        Some(Lenient::String(s)) => s
+            .trim()
+            .parse()
+            .map(Some)
+            .map_err(|_| serde::de::Error::custom(format!("expected a number, got {s:?}"))),
+    }
+}
+
+/// Serialize non-fractional floats as [i64].
+pub(crate) fn serialize_number<S>(value: &Option<f64>, serializer: S) -> Result<S::Ok, S::Error>
+where
+    S: Serializer,
+{
+    match value {
+        Some(n) if n.fract() == 0.0 && n.abs() < 2f64.powi(53) => {
+            serializer.serialize_i64(*n as i64)
+        }
+        Some(n) => serializer.serialize_f64(*n),
+        None => serializer.serialize_none(),
+    }
+}

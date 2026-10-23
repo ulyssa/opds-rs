@@ -62,6 +62,9 @@ pub enum Relation {
     /// The link is either a URI or a templated URI for performing a search.
     Search,
 
+    /// Refers to the first resource in a collection of resources.
+    Start,
+
     Subsection,
 
     #[serde(rename = "http://opds-spec.org/sort/new")]
@@ -141,6 +144,9 @@ pub enum PageDisplay {
     Left,
     Right,
     Center,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 /// Hints for how the layout of the publication should be presented.
@@ -150,6 +156,9 @@ pub enum PublicationLayout {
     Fixed,
     Reflowable,
     Scrolled,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 #[derive(Clone, Debug, Default, Eq, PartialEq, Deserialize, Serialize)]
@@ -160,6 +169,9 @@ pub enum ReadingProgression {
     #[serde(rename = "ltr")]
     #[default]
     LeftToRight,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 /// The price of purchasing access to a publication from the acquisition link.
@@ -257,6 +269,9 @@ pub enum AvailabilityState {
     Unavailable,
     Reserved,
     Ready,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 /// A resource's availability.
@@ -285,12 +300,47 @@ pub struct Availability<'a> {
 
 /// An identifier for a resource.
 ///
-/// This is either a URL or a URN.
-#[derive(Clone, Debug, Deserialize, Serialize)]
+/// This should be either a URL or a URN.
+#[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
 #[serde(untagged)]
 pub enum Identifier {
     Url(url::Url),
     Urn(urn::Urn),
+    /// While the OPDS schema says that identifier fields should be a URL or a URN,
+    /// some catalogs will return values like `"ISBN 9780441478125"` instead.
+    ///
+    /// Such values are preserved here so that we can still parse those catalogs and
+    /// handle their responses even when they are technically not schema-compliant.
+    Other(String),
+}
+
+impl Identifier {
+    /// The identifier as written.
+    pub fn as_str(&self) -> &str {
+        match self {
+            Self::Url(url) => url.as_str(),
+            Self::Urn(urn) => urn.as_str(),
+            Self::Other(s) => s,
+        }
+    }
+}
+
+impl From<url::Url> for Identifier {
+    fn from(url: url::Url) -> Self {
+        Self::Url(url)
+    }
+}
+
+impl From<urn::Urn> for Identifier {
+    fn from(urn: urn::Urn) -> Self {
+        Self::Urn(urn)
+    }
+}
+
+impl std::fmt::Display for Identifier {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.as_str())
+    }
 }
 
 /// An alternate identifier for a resource.
@@ -351,6 +401,9 @@ pub enum AccessMode {
     TextOnVisual,
     Textual,
     Visual,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
@@ -360,6 +413,9 @@ pub enum AccessibilityExemption {
     EaaDisproportionateBurden,
     EaaFundamentalAlteration,
     EaaMicroenterprise,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
@@ -453,6 +509,9 @@ pub enum AccessibilityFeature {
     None,
     #[serde(rename = "unknown")]
     Unknown,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
@@ -480,6 +539,9 @@ pub enum AccessibilityHazard {
     UnknownMotionSimulationHazard,
     #[serde(rename = "unknownSoundHazard")]
     UnknownSoundHazard,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
@@ -653,8 +715,13 @@ pub struct Collection<'a> {
     )]
     pub alt_identifier: Vec<AltIdentifier<'a>>,
 
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub position: Option<usize>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        serialize_with = "serialize_number",
+        deserialize_with = "deserialize_lenient_number"
+    )]
+    pub position: Option<f64>,
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
@@ -726,8 +793,13 @@ pub struct Periodical<'a> {
     )]
     pub alt_identifier: Vec<AltIdentifier<'a>>,
 
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub position: Option<usize>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        serialize_with = "serialize_number",
+        deserialize_with = "deserialize_lenient_number"
+    )]
+    pub position: Option<f64>,
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
@@ -1233,8 +1305,13 @@ pub struct Article<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub number_of_pages: Option<usize>,
 
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub position: Option<usize>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        serialize_with = "serialize_number",
+        deserialize_with = "deserialize_lenient_number"
+    )]
+    pub position: Option<f64>,
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
@@ -1310,8 +1387,13 @@ pub struct Series<'a> {
     )]
     pub alt_identifier: Vec<AltIdentifier<'a>>,
 
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub position: Option<usize>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        serialize_with = "serialize_number",
+        deserialize_with = "deserialize_lenient_number"
+    )]
+    pub position: Option<f64>,
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
@@ -1660,6 +1742,9 @@ pub struct DataMining {
 pub enum Reservation {
     All,
     None,
+    /// A currently unrecognized value, preserved as it originally appeared.
+    #[serde(untagged)]
+    Other(String),
 }
 
 /// A map of per-language choices, where each key is a BCP 47 language tag.
@@ -1836,7 +1921,13 @@ pub struct Contributor<'a> {
         deserialize_with = "deserialize_flattened_vec_stringy"
     )]
     pub alt_identifier: Vec<AltIdentifier<'a>>,
-    #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
+    /// The contributor's roles; the schema allows a single string or an array.
+    #[serde(
+        borrow,
+        default,
+        skip_serializing_if = "Vec::is_empty",
+        deserialize_with = "deserialize_flattened_vec"
+    )]
     pub role: Vec<Cow<'a, str>>,
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
@@ -1898,7 +1989,7 @@ pub struct FeedMetadata<'a> {
     pub subtitle: Vec<StringWithAlternates<'a>>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub identifier: Option<url::Url>,
+    pub identifier: Option<Identifier>,
 
     /// The schema to which this metadata adheres.
     ///
@@ -1970,7 +2061,12 @@ pub struct PublicationMetadata<'a> {
     #[serde(borrow, skip_serializing_if = "Option::is_none", rename = "@type")]
     pub schema: Option<Cow<'a, str>>,
 
-    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    /// Profiles this publication conforms to.
+    #[serde(
+        default,
+        skip_serializing_if = "Vec::is_empty",
+        deserialize_with = "deserialize_flattened_vec"
+    )]
     pub conforms_to: Vec<url::Url>,
 
     /// The title of a publication.
@@ -2004,13 +2100,13 @@ pub struct PublicationMetadata<'a> {
     #[serde(borrow, skip_serializing_if = "Option::is_none")]
     pub description: Option<Cow<'a, str>>,
 
-    /// A valid URI to help identify this publication.
+    /// A URI to help identify this publication.
     ///
     /// See [Default Context: Identifier] for more information.
     ///
     /// [Default Context: Identifier]: https://readium.org/webpub-manifest/contexts/default/#identifier
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub identifier: Option<url::Url>,
+    pub identifier: Option<Identifier>,
 
     /// Alternates to the primary `identifier`.
     ///
@@ -2058,7 +2154,12 @@ pub struct PublicationMetadata<'a> {
     )]
     pub language: Vec<Cow<'a, langtag::LangTag>>,
 
-    #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
+    #[serde(
+        borrow,
+        default,
+        skip_serializing_if = "Vec::is_empty",
+        deserialize_with = "deserialize_flattened_vec_stringy"
+    )]
     pub subject: Vec<Subject<'a>>,
 
     /// The layout and rendering category of this publication.
@@ -2078,11 +2179,20 @@ pub struct PublicationMetadata<'a> {
     pub reading_progression: Option<ReadingProgression>,
 
     /// The duration in seconds of this publication.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub duration: Option<usize>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        deserialize_with = "deserialize_lenient_number",
+        serialize_with = "serialize_number"
+    )]
+    pub duration: Option<f64>,
 
     /// Whether or not this is an abridged edition of this publication.
-    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        deserialize_with = "deserialize_lenient_bool"
+    )]
     pub abridged: Option<bool>,
 
     /// The number of pages in this publication.
