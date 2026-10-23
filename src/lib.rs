@@ -1,3 +1,4 @@
+pub mod authentication;
 pub mod mime;
 pub mod schema;
 pub mod v2_0;

@@ -28,6 +28,12 @@ pub enum Relation {
     /// A link to the cover of a publication.
     Cover,
 
+    /// Support resources for the user, such as a website, an email or a telephone number).
+    Help,
+
+    /// Logo associated to the Catalog provider.
+    Logo,
+
     /// A link to a [Web Application Manifest].
     ///
     /// [Web Application Manifest]: https://www.w3.org/TR/appmanifest/
@@ -35,6 +41,9 @@ pub enum Relation {
 
     /// A link to a user's profile.
     Profile,
+
+    /// Location where a user can register.
+    Register,
 
     /// A link to the first resource in a collection of resources.
     ///
