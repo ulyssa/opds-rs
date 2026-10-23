@@ -228,6 +228,26 @@ pub struct Publication<'a> {
     pub images: Vec<Link<'a>>,
 }
 
+impl<'a> Publication<'a> {
+    pub fn new(metadata: PublicationMetadata<'a>) -> Self {
+        Self {
+            metadata,
+            links: vec![],
+            images: vec![],
+        }
+    }
+
+    pub fn with_link(mut self, link: Link<'a>) -> Self {
+        self.links.push(link);
+        self
+    }
+
+    pub fn with_image(mut self, image: Link<'a>) -> Self {
+        self.images.push(image);
+        self
+    }
+}
+
 /// A group within an OPDS feed.
 ///
 /// See [Section 2.5: Groups][opds-spec-groups] for more information.
