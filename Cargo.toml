@@ -15,6 +15,7 @@ keywords = ["opds", "serde"]
 [dependencies]
 langtag = { version = "^1.1.0", features = ["serde"] }
 serde = "^1.0.228"
+serde_json = "^1.0.149"
 url = { version = "2.5.8", features = ["serde"] }
 urn = { version = "0.7.0", features = ["serde"] }
 
@@ -22,4 +23,3 @@ urn = { version = "0.7.0", features = ["serde"] }
 anyhow = "1.0.101"
 clap = { version = "4.5.60", features = ["derive"] }
 pretty_assertions = "^1.4.1"
-serde_json = "^1.0.149"

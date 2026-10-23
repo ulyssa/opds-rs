@@ -15,7 +15,7 @@ impl ValidatorCommand {
     fn run(&self) -> anyhow::Result<()> {
         match self {
             Self::Feed { file } => {
-                let json = std::fs::read_to_string(&file)?;
+                let json = std::fs::read_to_string(file)?;
                 let feed: Feed<'_> = serde_json::from_str(&json)?;
                 let output = serde_json::to_string_pretty(&feed)?;
                 println!("{output}");

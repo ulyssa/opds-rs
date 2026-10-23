@@ -31,6 +31,7 @@
 //! [opds-spec-facets]: https://drafts.opds.io/opds-2.0.html#24-facets
 //! [opds-spec-groups]: https://drafts.opds.io/opds-2.0.html#25-groups
 use std::borrow::Cow;
+use std::collections::BTreeMap;
 
 use serde::{Deserialize, Serialize};
 
@@ -119,6 +120,14 @@ pub struct Link<'a> {
     /// given collection role.
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub children: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Link<'a> {
@@ -139,6 +148,7 @@ impl<'a> Link<'a> {
             language: vec![],
             alternate: vec![],
             children: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 
@@ -159,6 +169,7 @@ impl<'a> Link<'a> {
             language: vec![],
             alternate: vec![],
             children: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 
@@ -180,6 +191,14 @@ pub struct Facet<'a> {
     pub metadata: FeedMetadata<'a>,
     #[serde(borrow)]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Facet<'a> {
@@ -189,6 +208,7 @@ impl<'a> Facet<'a> {
         Self {
             metadata,
             links: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -226,6 +246,14 @@ pub struct Publication<'a> {
     /// [opds-spec-images]: https://drafts.opds.io/opds-2.0#23-images
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub images: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Publication<'a> {
@@ -234,6 +262,7 @@ impl<'a> Publication<'a> {
             metadata,
             links: vec![],
             images: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 
@@ -276,6 +305,14 @@ pub struct FeedGroup<'a> {
     /// [opds-spec-publications]: https://drafts.opds.io/opds-2.0.html#21-navigation
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub publications: Vec<Publication<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> FeedGroup<'a> {
@@ -287,6 +324,7 @@ impl<'a> FeedGroup<'a> {
             links: vec![],
             navigation: vec![],
             publications: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -333,6 +371,14 @@ pub struct Feed<'a> {
     /// [opds-spec-groups]: https://drafts.opds.io/opds-2.0.html#25-groups
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub groups: Vec<FeedGroup<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Feed<'a> {
@@ -346,6 +392,7 @@ impl<'a> Feed<'a> {
             facets: vec![],
             publications: vec![],
             groups: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 
