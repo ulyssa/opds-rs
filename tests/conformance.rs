@@ -13,13 +13,7 @@ use opds::v2_0::{Feed, Link};
 
 #[test]
 fn simplified_acquisition_relations_recognized() {
-    for rel in [
-        "acquisition",
-        "borrow",
-        "buy",
-        "download",
-        "subscribe",
-    ] {
+    for rel in ["acquisition", "borrow", "buy", "download", "subscribe"] {
         let json = format!(
             r#"{{"rel":"{rel}","href":"http://example.test/file.epub","type":"application/epub+zip"}}"#
         );

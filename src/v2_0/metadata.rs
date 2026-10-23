@@ -107,7 +107,10 @@ pub enum AcquisitionKind {
 
     /// Indicates that a publication is freely accessible without any requirement,
     /// including authentication.
-    #[serde(rename = "download", alias = "http://opds-spec.org/acquisition/open-access")]
+    #[serde(
+        rename = "download",
+        alias = "http://opds-spec.org/acquisition/open-access"
+    )]
     Download,
 
     /// Indicates that a publication can be purchased for a given price.
@@ -125,7 +128,10 @@ pub enum AcquisitionKind {
 
     /// Indicates that a publication be subscribed to, usually as part of a
     /// purchase and for a limited period of time.
-    #[serde(rename = "subscribe", alias = "http://opds-spec.org/acquisition/subscribe")]
+    #[serde(
+        rename = "subscribe",
+        alias = "http://opds-spec.org/acquisition/subscribe"
+    )]
     Subscribe,
 }
 
@@ -168,6 +174,14 @@ pub struct Price {
     pub value: f32,
     /// The unit of currency for the price value.
     pub currency: String,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// An OPDS acquisition object.
@@ -186,6 +200,14 @@ pub struct Acquisition<'a> {
     /// An additional layer of indirection for further acquisition objects.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub child: Vec<Acquisition<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// Information about a library's holds for a publication.
@@ -197,6 +219,14 @@ pub struct Holds {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub position: Option<usize>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// Information about a library's number of copies for a publication.
@@ -208,6 +238,14 @@ pub struct Copies {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub available: Option<usize>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// A resource's current availability state.
@@ -235,6 +273,14 @@ pub struct Availability<'a> {
     /// Timestamp for when the next state change will occur.
     #[serde(borrow, skip_serializing_if = "Option::is_none")]
     pub until: Option<Cow<'a, str>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// An identifier for a resource.
@@ -259,6 +305,14 @@ pub struct AltIdentifier<'a> {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub scheme: Option<url::Url>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> AltIdentifier<'a> {
@@ -266,6 +320,7 @@ impl<'a> AltIdentifier<'a> {
         Self {
             value,
             scheme: None,
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -438,6 +493,14 @@ pub struct AccessbilityCertification<'a> {
 
     #[serde(borrow, skip_serializing_if = "Option::is_none")]
     pub report: Option<Cow<'a, str>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// Accessibility metadata for a publication.
@@ -474,6 +537,14 @@ pub struct AccessibilityMetadata<'a> {
 
     #[serde(borrow, skip_serializing_if = "Option::is_none")]
     pub summary: Option<Cow<'a, str>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// A "belongs to" relationship.
@@ -552,6 +623,14 @@ pub struct BelongsTo<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub volume: Vec<Volume<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
@@ -579,6 +658,14 @@ pub struct Collection<'a> {
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// A collection of related publications.
@@ -597,6 +684,7 @@ impl<'a> Collection<'a> {
             alt_identifier: vec![],
             position: None,
             links: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -659,6 +747,14 @@ pub struct Periodical<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub volume: Vec<Volume<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Periodical<'a> {
@@ -674,6 +770,7 @@ impl<'a> Periodical<'a> {
             links: vec![],
             issue: vec![],
             volume: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -719,6 +816,14 @@ pub struct Episode<'a> {
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Episode<'a> {
@@ -731,6 +836,7 @@ impl<'a> Episode<'a> {
             identifier: None,
             alt_identifier: vec![],
             links: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -786,6 +892,14 @@ pub struct Season<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub chapter: Vec<Chapter<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Season<'a> {
@@ -800,6 +914,7 @@ impl<'a> Season<'a> {
             links: vec![],
             article: vec![],
             chapter: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -863,6 +978,14 @@ pub struct StoryArc<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub episode: Vec<Episode<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> StoryArc<'a> {
@@ -878,6 +1001,7 @@ impl<'a> StoryArc<'a> {
             chapter: vec![],
             issue: vec![],
             episode: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -933,6 +1057,14 @@ pub struct Issue<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub chapter: Vec<Chapter<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Issue<'a> {
@@ -947,6 +1079,7 @@ impl<'a> Issue<'a> {
             links: vec![],
             article: vec![],
             chapter: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -989,6 +1122,14 @@ pub struct Chapter<'a> {
         deserialize_with = "deserialize_flattened_vec_stringy"
     )]
     pub series: Vec<Series<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Chapter<'a> {
@@ -1002,6 +1143,7 @@ impl<'a> Chapter<'a> {
             alt_identifier: vec![],
             links: vec![],
             series: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1096,6 +1238,14 @@ pub struct Article<'a> {
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Article<'a> {
@@ -1118,6 +1268,7 @@ impl<'a> Article<'a> {
             number_of_pages: None,
             position: None,
             links: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1212,6 +1363,14 @@ pub struct Series<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub volume: Vec<Volume<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Series<'a> {
@@ -1231,6 +1390,7 @@ impl<'a> Series<'a> {
             season: vec![],
             story_arc: vec![],
             volume: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1300,6 +1460,14 @@ pub struct Volume<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub story_arc: Vec<StoryArc<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Volume<'a> {
@@ -1315,6 +1483,7 @@ impl<'a> Volume<'a> {
             chapter: vec![],
             issue: vec![],
             story_arc: vec![],
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1393,6 +1562,14 @@ pub struct Contains<'a> {
         deserialize_with = "deserialize_flattened_vec_numlike"
     )]
     pub volume: Vec<Volume<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 /// The subject matter of a publication.
@@ -1418,6 +1595,14 @@ pub struct Subject<'a> {
 
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Subject<'a> {
@@ -1430,6 +1615,7 @@ impl<'a> Subject<'a> {
             code: None,
             scheme: None,
             links: Vec::new(),
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1458,6 +1644,14 @@ pub struct DataMining {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub policy: Option<url::Url>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
@@ -1646,6 +1840,14 @@ pub struct Contributor<'a> {
     pub role: Vec<Cow<'a, str>>,
     #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> Contributor<'a> {
@@ -1659,6 +1861,7 @@ impl<'a> Contributor<'a> {
             alt_identifier: Vec::new(),
             role: Vec::new(),
             links: Vec::new(),
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -1717,6 +1920,14 @@ pub struct FeedMetadata<'a> {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub number_of_items: Option<usize>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> FeedMetadata<'a> {
@@ -1733,6 +1944,7 @@ impl<'a> FeedMetadata<'a> {
             items_per_page: None,
             current_page: None,
             number_of_items: None,
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -2017,6 +2229,14 @@ pub struct PublicationMetadata<'a> {
         deserialize_with = "deserialize_flattened_vec_stringy"
     )]
     pub imprint: Vec<Contributor<'a>>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> PublicationMetadata<'a> {
@@ -2059,6 +2279,7 @@ impl<'a> PublicationMetadata<'a> {
             belongs_to: None,
             contains: None,
             tdm: None,
+            extensions: BTreeMap::new(),
         }
     }
 }
@@ -2100,6 +2321,14 @@ pub struct LinkProperties<'a> {
     /// Library-specific feature that contains information about the copies that a library has acquired.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub copies: Option<Copies>,
+
+    /// Captures additional fields that this crate does not know about, such as custom extensions.
+    ///
+    /// These fields are preserved as they originally appear so that they can survive a round trip
+    /// through being deserialized and then re-serialized by consumer applications that need to
+    /// manipulate OPDS documents.
+    #[serde(flatten, default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub extensions: BTreeMap<String, serde_json::Value>,
 }
 
 impl<'a> LinkProperties<'a> {
@@ -2112,6 +2341,7 @@ impl<'a> LinkProperties<'a> {
             holds: None,
             copies: None,
             availability: None,
-        } if indirect_acquisition.is_empty())
+            extensions,
+        } if indirect_acquisition.is_empty() && extensions.is_empty())
     }
 }
