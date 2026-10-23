@@ -2,3 +2,4 @@
 
 pub const APPLICATION_OPDS_JSON: &str = "application/opds+json";
 pub const APPLICATION_OPDS_PUBLICATION_JSON: &str = "application/opds-publication+json";
+pub const APPLICATION_OPDS_AUTHENTICATION_JSON: &str = "application/opds-authentication+json";

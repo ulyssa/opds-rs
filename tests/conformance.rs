@@ -284,6 +284,23 @@ fn feed_collection_extensions_survive() {
     assert_eq!(out["catalogs"][0]["metadata"]["title"], "A library");
 }
 
+#[test]
+fn authentication_document_extensions_survive() {
+    use opds::authentication::AuthenticationDocument;
+
+    let json = r#"{
+        "id": "http://example.test/auth",
+        "title": "Library",
+        "authentication": [{"type": "http://opds-spec.org/auth/basic", "x-flow": 1}],
+        "service_description": "Sign in with your library card"
+    }"#;
+    let doc: AuthenticationDocument<'_> =
+        serde_json::from_str(json).expect("document should parse");
+    let out = round_trip(&doc);
+    assert_eq!(out["service_description"], "Sign in with your library card");
+    assert_eq!(out["authentication"][0]["x-flow"], 1);
+}
+
 // ---------------------------------------------------------------------------
 // Every feed fixture (see tests/README.md) reaches a fixed point after one
 // parse-and-serialize: serializing a re-parsed output changes nothing.
