@@ -18,7 +18,7 @@ used by adding `opds` to your dependencies in your project's `Cargo.toml`.
 
 ```toml
 [dependencies]
-opds = "*"
+opds = "0.0.3"
 ```
 
 ## License
