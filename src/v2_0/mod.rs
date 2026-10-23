@@ -101,7 +101,12 @@ pub struct Link<'a> {
     pub bitrate: Option<f64>,
 
     /// Length of the linked resource in seconds.
-    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        deserialize_with = "deserialize_lenient_number",
+        serialize_with = "serialize_number"
+    )]
     pub duration: Option<f64>,
 
     /// Expected language of the linked resource.
@@ -109,7 +114,12 @@ pub struct Link<'a> {
     /// Languages should be in [BCP 47] syntax.
     ///
     /// [BCP 47]: https://www.rfc-editor.org/info/bcp47
-    #[serde(borrow, default, skip_serializing_if = "Vec::is_empty")]
+    #[serde(
+        borrow,
+        default,
+        skip_serializing_if = "Vec::is_empty",
+        deserialize_with = "deserialize_flattened_vec"
+    )]
     pub language: Vec<Cow<'a, langtag::LangTag>>,
 
     /// Alternate resources for the linked resource.
@@ -171,6 +181,24 @@ impl<'a> Link<'a> {
             children: vec![],
             extensions: BTreeMap::new(),
         }
+    }
+
+    /// Add a link relation.
+    pub fn with_rel(mut self, rel: Relation) -> Self {
+        self.rel.push(rel);
+        self
+    }
+
+    /// Set the title shown for the link.
+    pub fn with_title(mut self, title: impl Into<Cow<'a, str>>) -> Self {
+        self.title = Some(title.into());
+        self
+    }
+
+    /// Set the expected number of items behind the link (`properties.numberOfItems`).
+    pub fn with_count(mut self, count: usize) -> Self {
+        self.properties.count = Some(count);
+        self
     }
 
     pub fn get_acquisition(&self) -> Option<AcquisitionKind> {

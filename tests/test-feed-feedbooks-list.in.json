@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "title": "La romance historique",
+    "itemsPerPage": 50,
+    "currentPage": 1,
+    "numberOfItems": 10
+  },
+  "links": [
+    {
+      "type": "application/opds+json",
+      "rel": "self",
+      "href": "https://catalog.feedbooks.com/lists/51429.json"
+    },
+    {
+      "type": "application/opds+json",
+      "rel": "search",
+      "href": "https://catalog.feedbooks.com/search.json{?query}",
+      "templated": true
+    }
+  ],
+  "facets": [
+    {
+      "metadata": {
+        "title": "Sort"
+      },
+      "links": [
+        {
+          "type": "application/opds+json",
+          "href": "https://catalog.feedbooks.com/lists/51429.json?sort=top",
+          "title": "Best sellers"
+        },
+        {
+          "type": "application/opds+json",
+          "href": "https://catalog.feedbooks.com/recent.json",
+          "title": "New releases"
+        },
+        {
+          "type": "application/opds+json",
+          "href": "https://catalog.feedbooks.com/picks.json",
+          "title": "Featured picks"
+        },
+        {
+          "type": "application/opds+json",
+          "href": "https://catalog.feedbooks.com/lists/51429.json?sort=awards",
+          "title": "Awards"
+        },
+        {
+          "type": "application/opds+json",
+          "href": "https://catalog.feedbooks.com/featured.json",
+          "title": "New & noteworthy"
+        }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "metadata": {
+        "@type": "http://schema.org/Book",
+        "title": "Helena - Tome 1",
+        "subtitle": "Les rêves piégés",
+        "abridged": "false",
+        "schema:locationCreated": {
+          "@type": "http://schema.org/State",
+          "schema:name": "Quebec"
+        },
+        "accessibility": {
+          "summary": "Les images ne faisant pas partie du contenu du livre sont décrites. Toutes les autres images sont décoratives. Les fonctionnalités d’accessibilité comprennent l’affichage de la transformabilité, la navigation structurelle, les numéros de page de l’imprimé et les textes alternatifs. Un certain nombre de pages blanches dans l’équivalent imprimé ont été supprimées, ce qui fait que certaines pages n’apparaissent pas dans ce ePub.",
+          "conformsTo": "http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa",
+          "feature": [
+            "alternativeText",
+            "structuralNavigation",
+            "readingOrder",
+            "tableOfContents",
+            "displayTransformability",
+            "displayTransformability"
+          ],
+          "accessModeSufficient": [
+            "textual"
+          ]
+        },
+        "language": "fr",
+        "modified": "2026-10-14T07:30:47+02:00",
+        "published": "2025-06-12T00:00:00+02:00",
+        "numberOfPages": 384,
+        "identifier": "urn:ISBN:9782898511202",
+        "schema:encodingFormat": "application/epub+zip",
+        "presentation": {
+          "layout": "reflowable"
+        },
+        "schema:workExample": [
+          {
+            "@type": "http://schema.org/Book",
+            "schema:bookFormat": "http://schema.org/Hardcover",
+            "schema:isbn": "urn:ISBN:9782898511189"
+          },
+          {
+            "@type": "http://schema.org/EBook",
+            "schema:encodingFormat": "application/pdf",
+            "schema:isbn": "urn:ISBN:9782898511196"
+          }
+        ],
+        "author": [
+          {
+            "name": "Katherine Girard",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=546927&languages=fr"
+              }
+            ]
+          }
+        ],
+        "publisher": {
+          "name": "Éditions Hurtubise",
+          "links": [
+            {
+              "type": "application/opds+json",
+              "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=4481&languages=fr"
+            }
+          ]
+        },
+        "description": "1917, Saint-Ambroise, Lac-Saint-Jean. Helena Gaudreau a 17 ans quand son père décide de la marier à son ami d’enfance et voisin Liguori. Même si elle ne ressent pour lui aucune passion, elle se rend à l’évidence : entre les tâches harassantes sur la ferme familiale, sa mère toujours malade et le nombre grandissant de frères et de sœurs dont elle doit continuellement prendre soin, le mariage est sa seule échappatoire.\n\nLa jeune femme ne pourra se bercer d’illusions longtemps. Amélia, sa belle-mère, chez qui elle s’installe une fois mariée, est d’une grande méchanceté envers elle, et son existence de nouvelle épouse ne sera pas de tout repos – une crainte qui se confirme quand la conscription force le départ au front de Liguori. La liberté à laquelle elle aspire tant n'est pas à sa portée, mais le tourbillon des mariages, décès et naissances au sein de sa grande famille ne parvient pas à la distraire de ce rêve inaccessible.\n\nAu fil de ses jours souvent difficiles, Helena se raccroche à un souvenir : sa rencontre avec François, un ami de Liguori nouvellement veuf, pour qui elle nourrit en secret des sentiments inavouables, sans savoir que leurs chemins se recroiseront…",
+        "belongsTo": {
+          "series": [
+            {
+              "name": "Helena",
+              "position": "1",
+              "links": [
+                {
+                  "type": "application/opds+json",
+                  "href": "https://catalog.feedbooks.com/series/153007.json?languages=fr"
+                }
+              ]
+            }
+          ]
+        },
+        "subject": [
+          {
+            "code": "FBFIC000000",
+            "name": "Fiction",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC000000.json?languages=fr"
+              }
+            ]
+          },
+          {
+            "code": "FBFIC027000",
+            "name": "Romance",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC027000.json?languages=fr"
+              }
+            ]
+          },
+          {
+            "code": "FBFIC027050",
+            "name": "Historical",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC027050.json?languages=fr"
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "href": "https://covers.feedbooks.net/item/6609971.jpg?size=large&t=1744343350",
+          "type": "image/jpeg",
+          "width": 260,
+          "height": 420
+        },
+        {
+          "href": "https://covers.feedbooks.net/item/6609971.jpg?t=1744343350",
+          "type": "image/jpeg",
+          "width": 100,
+          "height": 180
+        }
+      ],
+      "links": [
+        {
+          "rel": "http://opds-spec.org/acquisition/sample",
+          "href": "https://catalog.feedbooks.com/item/6609971/preview",
+          "type": "application/epub+zip"
+        },
+        {
+          "rel": "http://opds-spec.org/acquisition/sample",
+          "href": "https://catalog.feedbooks.com/item/6609971/preview.html",
+          "type": "text/html"
+        },
+        {
+          "rel": "self",
+          "href": "https://catalog.feedbooks.com/item/6609971.json",
+          "type": "application/opds-publication+json",
+          "properties": {
+            "authenticate": {
+              "href": "https://catalog.feedbooks.com/user/authentication",
+              "type": "application/opds-authentication+json"
+            }
+          }
+        },
+        {
+          "rel": "alternate",
+          "type": "application/pdf",
+          "href": "urn:ISBN:9782898511196"
+        }
+      ],
+      "licenses": [
+        {
+          "metadata": {
+            "identifier": "urn:X-UNKNOWN:enqc-138876-46-310548-1733839557795-libraries",
+            "format": "application/epub+zip",
+            "price": {
+              "value": "17.99",
+              "currency": "EUR"
+            },
+            "created": "2025-04-11T05:49:08.000+02:00",
+            "terms": {
+              "checkouts": 55,
+              "concurrency": 1,
+              "length": 5097600,
+              "lifetime": 0
+            },
+            "protection": {
+              "devices": 6,
+              "copy": true,
+              "print": false
+            }
+          }
+        },
+        {
+          "metadata": {
+            "identifier": "urn:X-UNKNOWN:enqc-138876-46-310547-1733839557773-libraries",
+            "format": "application/pdf",
+            "price": {
+              "value": "17.99",
+              "currency": "EUR"
+            },
+            "created": "2025-04-11T05:49:08.000+02:00",
+            "terms": {
+              "checkouts": 55,
+              "concurrency": 1,
+              "length": 5097600,
+              "lifetime": 0
+            },
+            "protection": {
+              "devices": 6,
+              "copy": true,
+              "print": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "@type": "http://schema.org/Book",
+        "title": "La saga des quatre soldats (Tome 1 & 2)",
+        "abridged": "false",
+        "accessibility": {
+          "summary": "Cette publication respecte le niveau WCAG 2.0 AA.",
+          "feature": [
+            "readingOrder",
+            "structuralNavigation",
+            "printPageNumbers",
+            "tableOfContents"
+          ],
+          "accessModeSufficient": [
+            "textual"
+          ]
+        },
+        "language": "fr",
+        "modified": "2026-10-21T20:14:37+02:00",
+        "published": "2025-03-12T00:00:00+01:00",
+        "numberOfPages": 706,
+        "identifier": "urn:ISBN:9782290418086",
+        "schema:encodingFormat": "application/epub+zip",
+        "presentation": {
+          "layout": "reflowable"
+        },
+        "schema:workExample": [
+          {
+            "@type": "http://schema.org/Book",
+            "schema:bookFormat": "http://schema.org/Hardcover",
+            "schema:isbn": "urn:ISBN:9782290418079"
+          },
+          {
+            "@type": "http://schema.org/EBook",
+            "schema:encodingFormat": "application/pdf",
+            "schema:isbn": "urn:ISBN:9782290418116"
+          }
+        ],
+        "author": [
+          {
+            "name": "Elizabeth Hoyt",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=59532&languages=fr"
+              }
+            ]
+          }
+        ],
+        "translator": [
+          {
+            "name": "Daniel Garcia",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=134121&languages=fr"
+              }
+            ]
+          },
+          {
+            "name": "Dany Osborne",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=269422&languages=fr"
+              }
+            ]
+          }
+        ],
+        "publisher": {
+          "name": "J'ai Lu",
+          "links": [
+            {
+              "type": "application/opds+json",
+              "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=3747&languages=fr"
+            }
+          ]
+        },
+        "description": "« Il était une fois, il y a très, très longtemps, quatre soldats qui rentraient chez eux. Le premier s’appelait Cœur de Fer, car son cœur battait sous sa poitrine, fort, courageux et obstiné. Le deuxième s’appelait Jack le Rieur. Il ne se connaissait aucun souci… » \n \n1759. Lady Emeline Gordon est un modèle pour l’élite londonienne. Elle est donc le chaperon idéal pour Rebecca, la jeune sœur de Samuel Hartley, homme d’affaires prospère de Boston et… ancien soldat. \nMelisande Fleming, elle, a toujours aimé lord Vale, séducteur impénitent. Lorsqu’il accepte de l’épouser, il est convaincu qu’il parviendra à dissimuler les cauchemars qui le hantent depuis la tragédie de Spinner’s Falls…",
+        "belongsTo": {
+          "collection": "Littérature",
+          "series": [
+            {
+              "name": "La saga des quatre soldats - L'Intégrale",
+              "position": "1",
+              "links": [
+                {
+                  "type": "application/opds+json",
+                  "href": "https://catalog.feedbooks.com/series/186663.json?languages=fr"
+                }
+              ]
+            }
+          ]
+        },
+        "subject": [
+          {
+            "code": "FBFIC000000",
+            "name": "Fiction",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC000000.json?languages=fr"
+              }
+            ]
+          },
+          {
+            "code": "FBFIC027000",
+            "name": "Romance",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC027000.json?languages=fr"
+              }
+            ]
+          },
+          {
+            "code": "FBFIC027050",
+            "name": "Historical",
+            "scheme": "http://www.feedbooks.com/categories",
+            "links": [
+              {
+                "type": "application/opds+json",
+                "href": "https://catalog.feedbooks.com/category/FBFIC027050.json?languages=fr"
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "href": "https://covers.feedbooks.net/item/6490713.jpg?size=large&t=1739358072",
+          "type": "image/jpeg",
+          "width": 260,
+          "height": 420
+        },
+        {
+          "href": "https://covers.feedbooks.net/item/6490713.jpg?t=1739358072",
+          "type": "image/jpeg",
+          "width": 100,
+          "height": 180
+        }
+      ],
+      "links": [
+        {
+          "rel": "http://opds-spec.org/acquisition/sample",
+          "href": "https://catalog.feedbooks.com/item/6490713/preview",
+          "type": "application/epub+zip"
+        },
+        {
+          "rel": "http://opds-spec.org/acquisition/sample",
+          "href": "https://catalog.feedbooks.com/item/6490713/preview.html",
+          "type": "text/html"
+        },
+        {
+          "rel": "self",
+          "href": "https://catalog.feedbooks.com/item/6490713.json",
+          "type": "application/opds-publication+json",
+          "properties": {
+            "authenticate": {
+              "href": "https://catalog.feedbooks.com/user/authentication",
+              "type": "application/opds-authentication+json"
+            }
+          }
+        },
+        {
+          "rel": "alternate",
+          "type": "application/pdf",
+          "href": "urn:ISBN:9782290418116"
+        }
+      ],
+      "licenses": [
+        {
+          "metadata": {
+            "identifier": "urn:ISBN:9782290418109",
+            "format": "application/pdf",
+            "price": {
+              "value": "17.99",
+              "currency": "EUR"
+            },
+            "created": "2025-02-12T12:00:23.000+01:00",
+            "terms": {
+              "checkouts": 25,
+              "concurrency": 5,
+              "length": 5097600,
+              "lifetime": 3650
+            },
+            "protection": {
+              "devices": 6,
+              "copy": true,
+              "print": false
+            }
+          }
+        },
+        {
+          "metadata": {
+            "identifier": "urn:ISBN:9782290418093",
+            "format": "application/epub+zip",
+            "price": {
+              "value": "17.99",
+              "currency": "EUR"
+            },
+            "created": "2025-02-12T12:00:23.000+01:00",
+            "terms": {
+              "checkouts": 25,
+              "concurrency": 5,
+              "length": 5097600,
+              "lifetime": 3650
+            },
+            "protection": {
+              "devices": 6,
+              "copy": true,
+              "print": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "metadata": {
+    "title": "Cantook Market"
+  },
+  "links": [
+    {
+      "href": "https://catalog.feedbooks.com/catalog.json",
+      "type": "application/opds+json",
+      "rel": "self"
+    },
+    {
+      "href": "https://catalog.feedbooks.com/search.json{?query}",
+      "templated": true,
+      "type": "application/opds+json",
+      "rel": "search"
+    }
+  ],
+  "navigation": [
+    {
+      "title": "Fiction",
+      "href": "https://catalog.feedbooks.com/category/FBFIC000000/sub.json",
+      "type": "application/opds+json"
+    },
+    {
+      "title": "Nonfiction",
+      "href": "https://catalog.feedbooks.com/category/FBNFC000000/sub.json",
+      "type": "application/opds+json"
+    },
+    {
+      "title": "Selections",
+      "href": "https://catalog.feedbooks.com/featured/lists.json",
+      "type": "application/opds+json"
+    }
+  ],
+  "groups": [
+    {
+      "metadata": {
+        "title": "New & noteworthy",
+        "numberOfItems": 2
+      },
+      "links": [
+        {
+          "href": "https://catalog.feedbooks.com/featured.json?languages=en",
+          "type": "application/opds+json",
+          "rel": "self"
+        }
+      ],
+      "publications": [
+        {
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "title": "Disloyal: A Memoir",
+            "subtitle": "The True Story of the Former Personal Attorney to President Donald J. Trump",
+            "author": [
+              {
+                "name": "Michaël Cohen",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=39380&languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "description": "<B>A #1 <I>New York Times</I> Bestseller!<BR><BR> \"I read it cover-to-cover. I did not intend to, but I started at the beginning and didn&rsquo;t put it down until it was over.\"&mdash;Rachel Maddow, MSNBC</B><BR><BR><I>This book almost didn&rsquo;t see the light of day as government officials tried to bar its publication.</I><BR><B>The Inside Story of the Real President Trump, by His Former Attorney and Personal Advisor&mdash;The Man Who Helped Get Him Into the Oval Office</B><BR><BR> Once Donald Trump&rsquo;s fiercest surrogate, closest confidant, and staunchest defender, Michael Cohen knows where the skeletons are buried.<BR><BR>This is the most devastating business and political horror story of the century. As Trump&rsquo;s lawyer and &ldquo;fixer,&rdquo; Cohen not only witnessed firsthand but was also an active participant in the inner workings of Trump&rsquo;s business empire, political campaign, and presidential administration.<BR><BR>This is a story that you have not read in newspapers, or on social media, or watched on television. These are accounts that only someone who worked for Trump around the clock for over a decade&mdash;not a few months or even a couple of years&mdash;could know. Cohen describes Trump&rsquo;s racist rants against President Barack Obama, Nelson Mandela, and Black and Hispanic people in general, as well as the cruelty, humiliation, and abuse he leveled at family and staff. Whether he&rsquo;s exposing the fact that Trump engaged in tax fraud by inflating his wealth or electronic fraud by rigging an online survey, or outing Trump&rsquo;s Neanderthal views towards women or his hush-money payments to clandestine lovers, Cohen pulls no punches.<BR><BR>He shows Trump&rsquo;s relentless willingness to lie, exaggerate, mislead, or manipulate. Trump emerges as a man without a soul&mdash;a man who courts evangelicals and then trashes them, panders to the common man, but then rips off small business owners, a con man who will do or say absolutely anything to win, regardless of the cost to his family, his associates, or his country.<BR><BR>At the heart of <I>Disloyal</I>, we see how Cohen came under the spell of his charismatic \"Boss\" and, as a result, lost all sense of his moral compass.<BR><BR>The real \"real\" Donald Trump who permeates these pages&mdash;the racist, sexist, homophobic, lying, cheating President&mdash;will be discussed, written about, and analyzed for years to come.",
+            "identifier": "urn:ISBN:9781510764705",
+            "accessibility": {
+              "accessMode": [],
+              "feature": [
+                "tableOfContents"
+              ],
+              "hazard": []
+            },
+            "modified": "2026-10-21T19:49:57+02:00",
+            "published": "2020-09-08T00:00:00+02:00",
+            "language": [
+              "en"
+            ],
+            "subject": [
+              {
+                "name": "Nonfiction",
+                "code": "FBNFC000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBNFC000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Law",
+                "code": "FBLAW000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Privacy",
+                "code": "FBLAW116000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW116000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Business law",
+                "code": "FBLAW111000N",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW111000N.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Business & financial",
+                "code": "FBLAW009000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW009000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Social science",
+                "code": "FBSOC000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBSOC000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Political science",
+                "code": "FBPOL000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Censorship",
+                "code": "FBPOL039000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL039000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Public",
+                "code": "FBLAW075000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW075000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Constitutional",
+                "code": "FBLAW018000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBLAW018000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Biography & autobiography",
+                "code": "FBBIO000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Criminals & outlaws",
+                "code": "FBBIO024000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO024000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Democracy",
+                "code": "FBPOL007000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL007000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Elections",
+                "code": "FBPOL008000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL008000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Government",
+                "code": "FBPOL040000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL040000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Executive branch",
+                "code": "FBPOL040010",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL040010.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Lawyers & judges",
+                "code": "FBBIO020000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO020000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Personal memoirs",
+                "code": "FBBIO026000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO026000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Political",
+                "code": "FBBIO010000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO010000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Political process",
+                "code": "FBPOL016000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBPOL016000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Presidents & heads of State",
+                "code": "FBBIO011000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBBIO011000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "News and investigations",
+                "code": "FBSACT000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBSACT000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "True crime",
+                "code": "FBTRU000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBTRU000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "History",
+                "code": "FBHIS000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBHIS000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "History by country",
+                "code": "FBHIS000000N",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBHIS000000N.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "United States",
+                "code": "FBHIS036000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBHIS036000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "abridged": false,
+            "numberOfPages": 432,
+            "publisher": [
+              {
+                "name": "Skyhorse",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=6093&languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "presentation": {
+              "layout": "reflowable"
+            },
+            "schema:encodingFormat": "application/epub+zip",
+            "schema:workExample": [
+              {
+                "@type": "http://schema.org/Book",
+                "schema:bookFormat": "http://schema.org/Hardcover",
+                "schema:isbn": "urn:ISBN:9781510764699"
+              }
+            ]
+          },
+          "links": [
+            {
+              "href": "https://catalog.feedbooks.com/item/3529084/preview",
+              "type": "application/epub+zip",
+              "rel": "preview"
+            },
+            {
+              "href": "https://catalog.feedbooks.com/item/3529084/preview.html",
+              "type": "text/html",
+              "rel": "preview"
+            },
+            {
+              "href": "https://catalog.feedbooks.com/item/3529084.json",
+              "type": "application/opds-publication+json",
+              "rel": "self",
+              "properties": {
+                "authenticate": {
+                  "href": "https://catalog.feedbooks.com/user/authentication",
+                  "type": "application/opds-authentication+json"
+                }
+              }
+            }
+          ],
+          "images": [
+            {
+              "href": "https://covers.feedbooks.net/item/3529084.jpg?size=large&t=1601311717",
+              "type": "image/jpeg",
+              "height": 420,
+              "width": 260
+            },
+            {
+              "href": "https://covers.feedbooks.net/item/3529084.jpg?t=1601311717",
+              "type": "image/jpeg",
+              "height": 180,
+              "width": 100
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "title": "What Happened to You?",
+            "subtitle": "Conversations on Trauma, Resilience, and Healing",
+            "author": [
+              {
+                "name": "Oprah Winfrey",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=17781&languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Bruce D. Perry",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=247100&languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "description": "<p><b>ONE MILLION COPIES SOLD<br>#1 <i>NEW YORK TIMES </i>BESTSELLER<br><br>Our earliest experiences shape our lives far down the road, and <i>What Happened to You?</i> provides powerful scientific and emotional insights into the behavioral patterns so many of us struggle to understand.</b><br><br><i>“Through this lens we can build a renewed sense of personal self-worth and ultimately recalibrate our responses to circumstances, situations, and relationships. It is, in other words, the key to reshaping our very lives.”</i>—Oprah Winfrey<br><br><b>This book is going to change the way you see your life.</b><br><br>Have you ever wondered \"Why did I do that?\" or \"Why can't I <i>just</i> control my behavior?\" Others may judge our reactions and think, \"What's wrong with that person?\" When questioning our emotions, it's easy to place the blame on ourselves; holding ourselves and those around us to an impossible standard. It's time we started asking a different question.<br><br>Through deeply personal conversations, Oprah Winfrey and renowned brain and trauma expert Dr. Bruce Perry offer a groundbreaking and profound shift from asking “What’s wrong with you?” to “What happened to you?” <br><br>Here, Winfrey shares stories from her own past, understanding through experience the vulnerability that comes from facing trauma and adversity at a young age. In conversation throughout the book, she and Dr. Perry focus on understanding people, behavior, and ourselves. It’s a subtle but profound shift in our approach to trauma, and it’s one that allows us to understand our pasts in order to clear a path to our future—opening the door to resilience and healing in a proven, powerful way.</p>",
+            "identifier": "urn:ISBN:9781250223210",
+            "accessibility": {
+              "conformsTo": [
+                "http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-a"
+              ],
+              "accessMode": [],
+              "feature": [
+                "readingOrder",
+                "structuralNavigation",
+                "tableOfContents"
+              ],
+              "hazard": [],
+              "summary": "This publication lacks alternative text for non-text elements, but it otherwise meets WCAG 2.2 Level A. Furthermore, the publication generally has been produced to meet WCAG Level AA, but it has not been checked for color contrast within images.",
+              "accessModeSufficient": [
+                "textual"
+              ]
+            },
+            "modified": "2026-10-22T21:09:16+02:00",
+            "published": "2021-04-27T00:00:00+02:00",
+            "language": [
+              "en"
+            ],
+            "subject": [
+              {
+                "name": "Nonfiction",
+                "code": "FBNFC000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBNFC000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Health & fitness",
+                "code": "FBHEA000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBHEA000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Self-help",
+                "code": "FBSEL000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBSEL000000.json?languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "abridged": false,
+            "publisher": [
+              {
+                "name": "Flatiron Books",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=15277&languages=en",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "presentation": {
+              "layout": "reflowable"
+            },
+            "schema:encodingFormat": "application/epub+zip",
+            "schema:workExample": [
+              {
+                "@type": "http://schema.org/Book",
+                "schema:bookFormat": "http://schema.org/Hardcover",
+                "schema:isbn": "urn:ISBN:9781250223180"
+              }
+            ]
+          },
+          "links": [
+            {
+              "href": "https://catalog.feedbooks.com/item/3952853/preview",
+              "type": "application/epub+zip",
+              "rel": "preview"
+            },
+            {
+              "href": "https://catalog.feedbooks.com/item/3952853/preview.html",
+              "type": "text/html",
+              "rel": "preview"
+            },
+            {
+              "href": "https://catalog.feedbooks.com/item/3952853.json",
+              "type": "application/opds-publication+json",
+              "rel": "self",
+              "properties": {
+                "authenticate": {
+                  "href": "https://catalog.feedbooks.com/user/authentication",
+                  "type": "application/opds-authentication+json"
+                }
+              }
+            }
+          ],
+          "images": [
+            {
+              "href": "https://covers.feedbooks.net/item/3952853.jpg?size=large&t=1789270291",
+              "type": "image/jpeg",
+              "height": 420,
+              "width": 260
+            },
+            {
+              "href": "https://covers.feedbooks.net/item/3952853.jpg?t=1789270291",
+              "type": "image/jpeg",
+              "height": 180,
+              "width": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "title": "Featured picks",
+        "numberOfItems": 0
+      },
+      "links": [
+        {
+          "href": "https://catalog.feedbooks.com/picks.json?languages=en",
+          "type": "application/opds+json",
+          "rel": "self"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "title": "Frissons et apparitions",
+        "description": "Quand le plancher craque sans raison ou qu’une ombre se faufile au détour d’un couloir, c’est signe que les fantômes ne sont jamais bien loin! Espiègles, attachants, mystérieux ou délicieusement effrayants, ils n’aiment rien tant que hanter les pages de vos livres préférés. Restez sur vos gardes et plongez dans ces histoires peuplées d’apparitions et de mystères, qui pourraient bien vous arracher quelques délicieux frissons.",
+        "numberOfItems": 14
+      },
+      "links": [
+        {
+          "href": "https://catalog.feedbooks.com/lists/51776.json",
+          "type": "application/opds+json",
+          "rel": "self"
+        }
+      ],
+      "publications": [
+        {
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "title": "L'étrange manoir de Hoarder Hill",
+            "author": [
+              {
+                "name": "Mikki Lish",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=1326546&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Kelly Ngai",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=1326547&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "description": "Mauvaise surprise : Hedy et Spencer doivent passer les vacances de Noël chez leur grand-père.\nDepuis la disparition de sa femme lors d’un de ses tours, celui-ci a arrêté la magie, et maintenant il vit dans le manoir de Hoarder Hill à entasser les objets soi-disant magiques auxquels il est interdit de toucher…\nMais lorsque les enfants commencent à recevoir des messages leur demandant de l’aide, ils comprennent qu’ils sont face à une véritable magie, et que quelqu’un vit dans les murs de la maison… s’agit-il vraiment de l’âme de leur grand-mère disparue et prisonnière, comme les messages le prétendent ?\nEt qui est Personne, cet esprit qui affirme que leur grand-père a volontairement fait disparaître sa femme ?\nDécidés à découvrir la vérité, les enfants s’associent alors avec Stan, la tête de cerf empaillé et Doug, le tapis en peau d’ours, pour libérer leur grand-mère… mais dans cet univers magique, comment savoir qui sont leurs alliés et leurs ennemis ?",
+            "identifier": "urn:ISBN:9791039510585",
+            "accessibility": {
+              "accessMode": [],
+              "feature": [
+                "printPageNumbers",
+                "readingOrder",
+                "structuralNavigation",
+                "tableOfContents",
+                "synchronizedAudioText"
+              ],
+              "hazard": [],
+              "summary": "\"Cette publication contient des images sans description textuelle.\"",
+              "accessModeSufficient": [
+                "textual"
+              ]
+            },
+            "modified": "2026-09-30T04:38:15+02:00",
+            "published": "2021-10-08T00:00:00+02:00",
+            "language": [
+              "fr"
+            ],
+            "subject": [
+              {
+                "name": "Fiction",
+                "code": "FBFIC000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBFIC000000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Juvenile & young adult",
+                "code": "FBJUV000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBJUV000000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Occult & supernatural",
+                "code": "FBJUV018000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBJUV018000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Children - Advanced reader",
+                "code": "READ0003",
+                "scheme": "http://schema.org/Audience",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/top/top.json?audiences=READ0003&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "abridged": false,
+            "belongsTo": {
+              "collection": [
+                {
+                  "name": "Roman"
+                }
+              ]
+            },
+            "translator": [
+              {
+                "name": "Julie Lopez",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=40652&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "artist": [
+              {
+                "name": "Germain Barthelemy",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=1478617&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "illustrator": [
+              {
+                "name": "Kelly Ngai",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=1326547&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "publisher": [
+              {
+                "name": "Auzou",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=18895&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "presentation": {
+              "layout": "reflowable"
+            },
+            "schema:audience": {
+              "@type": "schema:PeopleAudience",
+              "schema:suggestedMinAge": 12
+            },
+            "schema:encodingFormat": "application/epub+zip",
+            "schema:typicalAgeRange": "12-",
+            "schema:workExample": [
+              {
+                "@type": "http://schema.org/Book",
+                "schema:bookFormat": "http://schema.org/Hardcover",
+                "schema:isbn": "urn:ISBN:9782733895443"
+              }
+            ]
+          },
+          "links": [
+            {
+              "href": "https://catalog.feedbooks.com/item/4223683.json",
+              "type": "application/opds-publication+json",
+              "rel": "self",
+              "properties": {
+                "authenticate": {
+                  "href": "https://catalog.feedbooks.com/user/authentication",
+                  "type": "application/opds-authentication+json"
+                }
+              }
+            }
+          ],
+          "images": [
+            {
+              "href": "https://covers.feedbooks.net/item/4223683.jpg?size=large&t=1630526435",
+              "type": "image/jpeg",
+              "height": 420,
+              "width": 260
+            },
+            {
+              "href": "https://covers.feedbooks.net/item/4223683.jpg?t=1630526435",
+              "type": "image/jpeg",
+              "height": 180,
+              "width": 100
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "@type": "http://schema.org/Book",
+            "title": "L' auberge du pendu",
+            "author": [
+              {
+                "name": "Alexandre Côté-Fournier",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?author_ids=182722&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "description": "<p>Cinq amis partent en forêt passer la nuit dans un refuge. Ce qui s’annonçait comme une amusante fin de semaine de plein air tourne rapidement au cauchemar quand les randonneurs s’égarent en voulant emprunter un raccourci. La nuit tombe. La température devient glaciale et l’ambiance, oppressante. Quelque chose cloche dans ces bois. Lorsqu’un bâtiment se dresse devant eux, ils sont soulagés, convaincus d’avoir trouvé un endroit où se mettre à l’abri. Ils ne savent pas encore qu’ils sont tombés dans un piège dont ils ne sortiront pas tous indemnes.</p>",
+            "identifier": "urn:ISBN:9782897746421",
+            "accessibility": {
+              "accessMode": [],
+              "feature": [
+                "alternativeText",
+                "structuralNavigation",
+                "readingOrder",
+                "tableOfContents"
+              ],
+              "hazard": [],
+              "summary": "Cette publication est un livre simple, avec quelques images. Les fonctionnalités d’accessibilité comprennent l’affichage de la transformabilité, la navigation structurelle, les numéros de page de l’imprimé et les textes alternatifs. Un certain nombre de pages blanches dans l’équivalent imprimé ont été supprimées, ce qui fait que certaines pages n’apparaissent pas dans ce ePub.",
+              "accessModeSufficient": [
+                "textual"
+              ]
+            },
+            "modified": "2026-10-22T16:15:32+02:00",
+            "published": "2026-09-28T00:00:00+02:00",
+            "language": [
+              "fr"
+            ],
+            "subject": [
+              {
+                "name": "Fiction",
+                "code": "FBFIC000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBFIC000000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Juvenile & young adult",
+                "code": "FBJUV000000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBJUV000000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              },
+              {
+                "name": "Occult & supernatural",
+                "code": "FBJUV018000",
+                "scheme": "http://www.feedbooks.com/categories",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/category/FBJUV018000.json?languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "abridged": false,
+            "numberOfPages": 156,
+            "belongsTo": {
+              "collection": [
+                {
+                  "name": "Collection noire"
+                }
+              ]
+            },
+            "illustrator": [
+              {
+                "name": "Sylvain Cabot",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?contributor_ids=1180767&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "publisher": [
+              {
+                "name": "La courte échelle",
+                "links": [
+                  {
+                    "href": "https://catalog.feedbooks.com/browse/recent.json?imprint_ids=896&languages=fr",
+                    "type": "application/opds+json"
+                  }
+                ]
+              }
+            ],
+            "presentation": {
+              "layout": "reflowable"
+            },
+            "schema:audience": {
+              "@type": "schema:PeopleAudience",
+              "schema:suggestedMinAge": 11
+            },
+            "schema:encodingFormat": "application/epub+zip",
+            "schema:locationCreated": {
+              "@type": "http://schema.org/State",
+              "schema:name": "Quebec"
+            },
+            "schema:typicalAgeRange": "11-",
+            "schema:workExample": [
+              {
+                "@type": "http://schema.org/Book",
+                "schema:bookFormat": "http://schema.org/Hardcover",
+                "schema:isbn": "urn:ISBN:9782897746445"
+              },
+              {
+                "@type": "http://schema.org/EBook",
+                "schema:encodingFormat": "application/pdf",
+                "schema:isbn": "urn:ISBN:9782897746438"
+              }
+            ]
+          },
+          "links": [
+            {
+              "href": "https://catalog.feedbooks.com/item/8493849/preview.html",
+              "type": "text/html",
+              "rel": "preview"
+            },
+            {
+              "href": "https://catalog.feedbooks.com/item/8493849.json",
+              "type": "application/opds-publication+json",
+              "rel": "self",
+              "properties": {
+                "authenticate": {
+                  "href": "https://catalog.feedbooks.com/user/authentication",
+                  "type": "application/opds-authentication+json"
+                }
+              }
+            },
+            {
+              "href": "urn:ISBN:9782897746438",
+              "type": "application/pdf",
+              "rel": "alternate"
+            }
+          ],
+          "images": [
+            {
+              "href": "https://covers.feedbooks.net/item/8493849.jpg?size=large&t=1790569837",
+              "type": "image/jpeg",
+              "height": 420,
+              "width": 260
+            },
+            {
+              "href": "https://covers.feedbooks.net/item/8493849.jpg?t=1790569837",
+              "type": "image/jpeg",
+              "height": 180,
+              "width": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
