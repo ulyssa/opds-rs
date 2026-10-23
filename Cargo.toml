@@ -1,6 +1,6 @@
 [package]
 name = "opds"
-version = "0.0.2"
+version = "0.0.3"
 description = "Library for building and parsing OPDS responses"
 homepage = "https://github.com/ulyssa/opds-rs"
 repository = "https://github.com/ulyssa/opds-rs"
